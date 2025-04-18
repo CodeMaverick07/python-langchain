@@ -15,8 +15,6 @@ app = FastAPI(
     description= "A simple API server"
 )
 
-add_routes(app,ChatGoogleGenerativeAI(model="gemini-2.0-flash"),path="/gemini")
-
 model = ChatGoogleGenerativeAI(model="gemini-2.0-flash", convert_system_message_to_human=True)
 llm = Ollama(model="gemma3:12b")
 
